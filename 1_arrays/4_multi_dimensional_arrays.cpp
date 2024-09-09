@@ -27,12 +27,12 @@ int main()
 {
     std::cout << std::endl;
 
-    const int S1 = 2;
-    const int S2 = 3;                         
-    int nums[S1][S2] = { {10,20,30}, {40,50,60} };  // two dimensional array of integers         
+    const int row = 2;
+    const int col = 3;                         
+    int nums[row][col] = { {10,20,30}, {40,50,60} };  // two dimensional array of integers         
 
-    print(nums, S1, S2);
-    printMem(nums, S1, S2);    
+    print(nums, row, col);
+    printMem(nums, row, col);    
 
     std::cout << std::endl;    
     return 0;

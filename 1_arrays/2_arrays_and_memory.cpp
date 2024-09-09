@@ -10,21 +10,23 @@ int main()
 {
     std::cout << std::endl;
 
-    const int SIZE = 6;                                     // total number of values in the array
-    int nums[SIZE] = {10,20,30,40,50,60};                   // create an assign data to an array of SIZE values
-    std::cout << sizeof(nums) << " bytes\n";                // print the amount of memory in bytes for the variable nums
+    const int SIZE = 6;                                     // Define a constant SIZE for the array
+    int nums[SIZE] = {10, 20, 30, 40, 50, 60};              // Declare and initialize an array of 6 integers
+    std::cout << sizeof(nums) << " bytes\n";                // Print the size of the entire array in bytes (6 integers x 4 bytes = 24 bytes)
 
-    for(int i=0; i<SIZE; ++i) {                             // print the values of an array
-        std::cout << nums[i] << " " << &(nums[i]) << "\n";
+    // Print each element of the array and its memory address
+    for(int i = 0; i < SIZE; ++i) {                         
+        std::cout << nums[i] << " " << &(nums[i]) << "\n";  // nums[i] accesses the value, &(nums[i]) gives the memory address of each element
     }
     std::cout << "\n";
 
+    // Pointer to the array
+    int *p = nums;                                          // Declare a pointer p and initialize it with the address of the array nums
+    std::cout << sizeof(p) << " bytes\n";                   // Print the size of the pointer variable p (typically 8 bytes on a 64-bit system)
 
-    int *p = nums;                                          // store the memory address of the array into a pointer variable p
-    std::cout << sizeof(p) << " bytes\n";                   // print the amount of memory in bytes for the variable p
-
-    for(int i=0; i<SIZE; ++i) {                             // print the values of an array using a pointer
-        std::cout << p[i] << " " << &(p[i]) << "\n";
+    // Print each element of the array using the pointer and its memory address
+    for(int i = 0; i < SIZE; ++i) {                         
+        std::cout << p[i] << " " << &(p[i]) << "\n";        // p[i] is equivalent to nums[i], and &(p[i]) is the same as &(nums[i]) 
     }
     std::cout << "\n";
 
